@@ -1,3 +1,7 @@
+if current_user
+= current_user.email
+else
+= link_to 'Войти', new_user_registration_path
 %nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
   %a.navbar-brand{href: root_path} CourseApp
   %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
