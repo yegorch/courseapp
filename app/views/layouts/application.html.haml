@@ -10,7 +10,6 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/header'
+    = render 'layouts/messages'
   .container
-    %p.notice= notice
-    %p.alert= alert
     = yield
