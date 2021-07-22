@@ -17,6 +17,13 @@
           = link_to new_course_path, class: 'nav-link' do
             .fa.fa-book-reader
             Создать курс
+        .form-inline.my-2.my-lg-0
+          = form_tag(courses_path, method: :get) do 
+            .input-group
+              = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
+              %span.input-group-append
+                %button.btn.btn-primary.btn-sm{:type => "submit"}
+                  %span.fa.fa-search{"aria-hidden" => "true"}
 
         %li.nav-item.dropdown
           %a#navbarDropdown.nav-link.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
