@@ -1,8 +1,13 @@
 .card 
   .card-container 
+    .fa.fa-book
     = course.title
   .card-body 
     = course.description
   .card-footer
     = course.created_at
     = course.user
+  .card-fouter  
+    = link_to 'Show', course, class: 'btn btn-sm btn-primary'
+    = link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-warning'
+    = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
