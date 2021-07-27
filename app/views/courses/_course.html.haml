@@ -1,14 +1,16 @@
 .card 
   .card-container 
     .fa.fa-book
-    = course.title
+    = link_to course.title, course_path(course)
   .card-body 
     = course.description
   .card-footer
+    .far.fa-clock
     = course.created_at
+    .row
     .fa.fa-chalkboard-teacher
     = course.user
   .card-fouter  
-    = link_to 'Show', course, class: 'btn btn-sm btn-primary'
-    = link_to 'Edit', edit_course_path(course), class: 'btn btn-sm btn-warning'
-    = link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-sm btn-danger'
+    = link_to 'Открыть', course, class: 'btn btn-sm btn-primary'
+    = link_to 'Редактировать', edit_course_path(course), class: 'btn btn-sm btn-warning'
+    = link_to 'Удалить', course, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-sm btn-danger'
