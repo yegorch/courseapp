@@ -6,6 +6,11 @@ class Course < ApplicationRecord
 
   belongs_to :user
 
+  extend FriendlyId
+  friendly_id :title, use: :slugged
+
+  friendly_id :generated_slug, use: :slugged
+
   def to_s
     title
   end
