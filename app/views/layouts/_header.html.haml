@@ -17,6 +17,10 @@
           = link_to new_course_path, class: 'nav-link' do
             .fa.fa-book-reader
             Создать курс
+        %li.nav-item{class: "#{'active font-weight-bold' if current_page?(users_path)}"}
+          = link_to users_path, class: 'nav-link' do
+            .fa.fa-book-reader
+            Пользователи
         .form-inline.my-2.my-lg-0
           = form_tag(courses_path, method: :get) do 
             .input-group
