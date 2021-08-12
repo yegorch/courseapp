@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :courses
-  resources :users, only: [:index]
-  root "static_pages#landing_page"
+  resources :users, only: [:index, :edit, :show, :update]
+  root "home#index"
 
   get 'static_pages/privacy_policy'
 end
