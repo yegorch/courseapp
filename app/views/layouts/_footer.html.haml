@@ -1,0 +1,23 @@
+%hr
+
+%footer
+  .container
+    .row
+      .col-md-4
+        Copyright
+        © 
+        = Time.now.year
+        TeachYourself
+        .row
+        .fa.fa-envelope
+        = mail_to 'yegor.rb@gmail.com'
+        .row
+      .col-md-4 
+        Политика конфиденциальности
+        .row
+        Правила
+      .col-md-4
+        О нас
+        .row
+        = link_to 'Создать курс на CourseApp', new_course_path
+.p-2

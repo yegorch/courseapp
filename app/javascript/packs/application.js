@@ -14,5 +14,8 @@ ActiveStorage.start()
 
 require("trix")
 require("@rails/actiontext")
+require("stylesheets/application.scss")
 
 import "@fortawesome/fontawesome-free/css/all"
+import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/css/bootstrap'
