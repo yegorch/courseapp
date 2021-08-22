@@ -3,6 +3,11 @@
     .fa.fa-user
     = user.email
   .card-footer
+    Confirmed email?
+  - if user.confirmed_at.present?
+    .badge.badge-success Yes
+  - else
+    .badge.badge-danger No
     Вход
     = time_ago_in_words(user.created_at)
     ago
