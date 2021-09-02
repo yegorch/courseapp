@@ -14,3 +14,8 @@
  *= require_self
  */
 @import "trix/dist/trix";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+.form-control.is-invalid{ background-image: none; }
+.form-control.is-valid{ background-image: none; }
