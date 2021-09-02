@@ -1,12 +1,16 @@
 .card 
   .card-container 
-    .fa.fa-book
+    .fa.fa-graduation-cap
     = link_to course.title, course_path(course)
   .card-body 
     = course.description
   .card-footer
-    .far.fa-clock
+    .fa.fa-globe-africa
+    = course.language
+    = course.level
+    = course.price
     = course.created_at
+    = number_to_currency(course.price)
     .row
     .fa.fa-chalkboard-teacher
     = course.user
