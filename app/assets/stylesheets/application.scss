@@ -14,8 +14,13 @@
  *= require_self
  */
 @import "trix/dist/trix";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+
+.jumbotron {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #e9ecef;
+  border-radius: .3rem;
+}
 
 .form-control.is-invalid{ background-image: none; }
 .form-control.is-valid{ background-image: none; }
