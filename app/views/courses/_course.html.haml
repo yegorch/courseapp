@@ -13,7 +13,7 @@
     = number_to_currency(course.price)
     .row
     .fa.fa-chalkboard-teacher
-    = course.user
+    = course.user.username
   .card-fouter  
     = link_to 'Открыть', course, class: 'btn btn-sm btn-primary btn-white'
     = link_to 'Редактировать', edit_course_path(course), class: 'btn btn-sm btn-warning btn-white'
