@@ -1,12 +1,10 @@
 %h1 Все курсы
 
 .card-columns
-  - @courses.each do |course|
-    = render 'courses/course', course: course
 .row
   .col-md-2
     = search_form_for @q do |f|
-      = f.label :title
+      = f.label 'Название'
       = f.search_field :title_cont, placeholder: 'Название', class: 'form-control form-control-sm'
       = f.label :description
       = f.search_field :short_description_cont, placeholder: 'Описание', class: 'form-control form-control-sm'
