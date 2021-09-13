@@ -3,7 +3,7 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
-    @ransack_courses = Course.ransack(params: [courser_search], search_key: :courser_search)
+    @ransack_courses = Course.ransack(params[:courses_search], search_key: :courser_search)
     @courses = @ransack_courses.result.includes(:user)
   end
 
