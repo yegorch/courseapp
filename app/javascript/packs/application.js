@@ -18,5 +18,4 @@ require("stylesheets/application.scss")
 
 import "@fortawesome/fontawesome-free/css/all"
 import 'bootstrap/dist/js/bootstrap'
-import 'bootstrap/dist/css/bootstrap'
-
+import "bootstrap/dist/css/bootstrap";
