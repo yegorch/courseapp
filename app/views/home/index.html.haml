@@ -48,6 +48,9 @@
     = render 'courses/course', course: course
 %hr
 Лучшие курсы
+.card-colums
+  - @courses.each do |course|
+    = render 'courses/course', course: course
 %hr
 Больше всего отзывов
 %hr

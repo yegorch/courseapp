@@ -2,7 +2,7 @@ require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
   config.hosts = nil
-  config.action_mailer.default_url_options = { host: 'learncoursehub', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://learncoursehub.herokuapp.com/', port: 3000 }
 
   config.cache_classes = false
 
