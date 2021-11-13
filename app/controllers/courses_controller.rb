@@ -3,6 +3,7 @@ class CoursesController < ApplicationController
 
   # GET /courses or /courses.json
   def index
+    @course_all = Course.all
     @ransack_courses = Course.ransack(params[:courses_search], search_key: :courser_search)
     @courses = @ransack_courses.result.includes(:user)
     @latest_courses = Course.all.limit(2).order(created_at: :desc)
