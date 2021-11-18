@@ -1,7 +1,10 @@
 .card 
   .card-header 
     .fa.fa-user
-    = user.online?
+    - if user.online?
+      .text-success.fa.fa-circle
+    - else
+      .text-danger.fa.fa-circle
     = user.email
   .card-footer
     Confirmed email?

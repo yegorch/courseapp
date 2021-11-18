@@ -14,7 +14,8 @@
     .row
     .fa.fa-chalkboard-teacher
     = course.user.username
-  .card-fouter  
-    = link_to 'Открыть', course, class: 'btn btn-sm btn-primary btn-white'
-    = link_to 'Редактировать', edit_course_path(course), class: 'btn btn-sm btn-warning btn-white'
-    = link_to 'Удалить', course, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-sm btn-danger btn-white'
+  - if current_user
+    .card-fouter  
+      = link_to 'Открыть', course, class: 'btn btn-sm btn-primary btn-white'
+      = link_to 'Редактировать', edit_course_path(course), class: 'btn btn-sm btn-warning btn-white'
+      = link_to 'Удалить', course, method: :delete, data: { confirm: 'Вы уверены?' }, class: 'btn btn-sm btn-danger btn-white'
