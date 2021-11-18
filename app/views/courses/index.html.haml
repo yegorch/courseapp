@@ -25,5 +25,5 @@
 
   .col-md-10
     .card-columns
-      - @course.each do |course|
+      - @courses.each do |course|
         = render partial: 'course', collection: @courses
