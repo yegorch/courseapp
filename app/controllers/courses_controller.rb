@@ -16,6 +16,7 @@ class CoursesController < ApplicationController
   # GET /courses/new
   def new
     @course = Course.new
+    authorize @course
   end
 
   # GET /courses/1/edit
@@ -27,6 +28,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     @course.user = current_user
+    authorize @course
 
     respond_to do |format|
       if @course.save
@@ -50,6 +52,7 @@ class CoursesController < ApplicationController
         format.json { render json: @course.errors, status: :unprocessable_entity }
       end
     end
+    authorize @course
   end
 
   # DELETE /courses/1 or /courses/1.json
@@ -59,6 +62,7 @@ class CoursesController < ApplicationController
       format.html { redirect_to courses_url, notice: "Course was successfully destroyed." }
       format.json { head :no_content }
     end
+    authorize @course
   end
 
   private
