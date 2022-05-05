@@ -16,6 +16,9 @@
     = time_ago_in_words(user.created_at)
     ago
   .card-footer
+    - user.roles.each do |role|
+      .badge.badge-info
+        = role.name
     = user.sign_in_count
     = user.current_sign_in_at
     = user.last_sign_in_at
