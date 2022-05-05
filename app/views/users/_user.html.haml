@@ -19,6 +19,8 @@
     - user.roles.each do |role|
       .badge.badge-info
         = role.name
+    - if policy(user).edit?
+      = link_to 'Edit roles', edit_user_path(user), class: 'btn btn-sm btn-warning'
     = user.sign_in_count
     = user.current_sign_in_at
     = user.last_sign_in_at
