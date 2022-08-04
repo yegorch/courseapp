@@ -2,6 +2,8 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   before_action :set_global_variables
 
+  include PublicActivity::StoreController #save current_user using gem public_activity
+
   include Pundit
   protect_from_forgery
 
