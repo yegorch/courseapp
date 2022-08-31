@@ -10,10 +10,11 @@
     = course.level
     = course.price
     = course.created_at
+    = course.lessons.count
     = number_to_currency(course.price)
     .row
-    .fa.fa-chalkboard-teacher
-    = course.user.username
+      .fa.fa-chalkboard-teacher
+      = course.user.username
   - if policy(course).edit?
     .card-footer
       /- if policy(course).edit?
